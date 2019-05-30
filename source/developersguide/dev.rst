@@ -298,10 +298,11 @@ To enable this feature, add the following parameters to the API request:
    is not equal to 3, the expires parameter is ignored in the API
    request.
 
--  expires=YYYY-MM-DDThh:mm:ssZ: Specifies the date and time at which
+-  expires=YYYY-MM-DDThh:mm:ssZ+hhmm: Specifies the date and time at which
    the signature included in the request is expired. The timestamp is
    expressed in the YYYY-MM-DDThh:mm:ssZ format, as specified in the ISO
-   8601 standard.
+   8601 standard. Timestamp must be followd by `+` and timezone offset. 
+   Otherwise, verification is returned.
 
 For example:
 
